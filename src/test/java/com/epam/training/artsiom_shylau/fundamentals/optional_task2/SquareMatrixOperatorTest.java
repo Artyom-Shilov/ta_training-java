@@ -1,4 +1,4 @@
-package com.epam.training.artsiom_shylau.fundamentals_test.optional_task2_test;
+package com.epam.training.artsiom_shylau.fundamentals.optional_task2;
 
 import com.epam.training.artsiom_shylau.fundamentals.optional_task2.exception.OptionalTask2Exception;
 import com.epam.training.artsiom_shylau.fundamentals.optional_task2.util.MatrixOperator;

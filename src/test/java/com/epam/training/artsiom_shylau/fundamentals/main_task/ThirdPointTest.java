@@ -1,4 +1,4 @@
-package com.epam.training.artsiom_shylau.fundamentals_test.main_task_test;
+package com.epam.training.artsiom_shylau.fundamentals.main_task;
 
 import com.epam.training.artsiom_shylau.fundamentals.main_task.exception.MainTaskException;
 import com.epam.training.artsiom_shylau.fundamentals.main_task.third_point.util.OutputOfNumbers;

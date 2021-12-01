@@ -1,4 +1,4 @@
-package com.epam.training.artsiom_shylau.fundamentals_test.optional_task1_test;
+package com.epam.training.artsiom_shylau.fundamentals.optional_task1;
 
 import com.epam.training.artsiom_shylau.fundamentals.optional_task1.exception.OptionalTask1Exception;
 import com.epam.training.artsiom_shylau.fundamentals.optional_task1.util.FilterOfNumbers;
