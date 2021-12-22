@@ -7,7 +7,8 @@ import java.util.Random;
 
 public class MatrixOperations {
 
-    public int[][] formSquareMatrixAndFillWithRandomNumbers(int size, int maxAbsoluteValue) throws MatrixOperationsException {
+    public int[][] formSquareMatrixAndFillWithRandomNumbers(int size, int maxAbsoluteValue)
+                                                                                    throws MatrixOperationsException {
         ValidatorMatrixOperations.validateNumber(size);
         int[][] matrix = new int[size][size];
         for (int i = 0; i < matrix.length; i++) {
@@ -18,7 +19,8 @@ public class MatrixOperations {
         return matrix;
     }
 
-    public void sortLinesInOrderOfCertainColumnElementsIncreasing(int[][] matrix, int columnIndex) throws MatrixOperationsException {
+    public void sortLinesInOrderOfCertainColumnElementsIncreasing(int[][] matrix, int columnIndex)
+                                                                                    throws MatrixOperationsException {
         ValidatorMatrixOperations.validateMatrix(matrix);
         ValidatorMatrixOperations.validateNumber(columnIndex);
         if (columnIndex > matrix.length - 1) {
@@ -35,7 +37,8 @@ public class MatrixOperations {
         }
     }
 
-    public void sortColumnsInOrderOfCertainLineElementIncreasing(int[][] matrix, int lineIndex) throws MatrixOperationsException {
+    public void sortColumnsInOrderOfCertainLineElementIncreasing(int[][] matrix, int lineIndex)
+                                                                                    throws MatrixOperationsException {
         ValidatorMatrixOperations.validateMatrix(matrix);
         ValidatorMatrixOperations.validateNumber(lineIndex);
         if (lineIndex > matrix[0].length - 1) {
@@ -55,7 +58,8 @@ public class MatrixOperations {
         }
     }
 
-    public int findTotalSumBetweenFirstAndSecondPositiveElementsOfEachLine(int[][] matrix) throws MatrixOperationsException {
+    public int findTotalSumBetweenFirstAndSecondPositiveElementsOfEachLine(int[][] matrix)
+                                                                                    throws MatrixOperationsException {
         ValidatorMatrixOperations.validateMatrix(matrix);
         int sum = 0;
         for (int i = 0; i < matrix.length; i++) {
@@ -80,7 +84,8 @@ public class MatrixOperations {
         return sum;
     }
 
-    public String representMatrixAsString (int[][] matrix) {
+    public String representMatrixAsString (int[][] matrix) throws MatrixOperationsException {
+        ValidatorMatrixOperations.validateMatrix(matrix);
         StringBuilder stringBuilder = new StringBuilder();
         for (int[] line : matrix) {
             for (int element : line) {

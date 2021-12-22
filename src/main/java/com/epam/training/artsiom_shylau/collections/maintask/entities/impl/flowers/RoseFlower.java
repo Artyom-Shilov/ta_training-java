@@ -4,7 +4,7 @@ import com.epam.training.artsiom_shylau.collections.maintask.exceptions.FlowerEx
 
 public class RoseFlower extends Flower {
 
-    public RoseFlower(Builder builder) throws FlowerException {
+    public RoseFlower(Builder builder) {
         super(builder);
     }
 

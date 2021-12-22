@@ -2,8 +2,7 @@ package com.epam.training.artsiom_shylau.fundamentals.optionaltask1.exception;
 
 public class OperationsWithNumbersException extends Exception {
 
-    public OperationsWithNumbersException() {
-    }
+    public OperationsWithNumbersException() {}
 
     public OperationsWithNumbersException(String message) {
         super(message);

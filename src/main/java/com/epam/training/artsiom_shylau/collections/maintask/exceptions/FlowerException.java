@@ -2,8 +2,7 @@ package com.epam.training.artsiom_shylau.collections.maintask.exceptions;
 
 public class FlowerException extends Exception {
 
-    public FlowerException() {
-    }
+    public FlowerException() {}
 
     public FlowerException(String message) {
         super(message);

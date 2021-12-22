@@ -2,7 +2,6 @@ package com.epam.training.artsiom_shylau.fundamentals.optionaltask1.util;
 
 import com.epam.training.artsiom_shylau.fundamentals.optionaltask1.exception.OperationsWithNumbersException;
 import com.epam.training.artsiom_shylau.fundamentals.optionaltask1.validation.ValidatorOperationsWithNumbers;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class OperationsWithNumbers {
         return amountOfDigits;
     }
 
-    private static int[] numberAndItsLength = new int[2];
+    private int[] numberAndItsLength = new int[2];
 
     public int[] findShortestNumberAndItsLength(int[] array) throws OperationsWithNumbersException {
         ValidatorOperationsWithNumbers.validateArray(array);

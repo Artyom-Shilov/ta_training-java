@@ -73,7 +73,7 @@ public class SquareMatrixOperatorTest {
 
     @Test(expected = MatrixOperationsException.class)
     public void testFindTotalSumBetweenFirstAndSecondPositiveElementsOfEachLineNullAsArgument()
-            throws MatrixOperationsException {
+                                                                                    throws MatrixOperationsException {
         operator.findTotalSumBetweenFirstAndSecondPositiveElementsOfEachLine(null);
     }
 

@@ -2,7 +2,6 @@ package com.epam.training.artsiom_shylau.classes.maintask.entity;
 
 import com.epam.training.artsiom_shylau.classes.maintask.enums.BindingType;
 import com.epam.training.artsiom_shylau.classes.maintask.exceptions.BookException;
-
 import java.util.Objects;
 
 public class Book {

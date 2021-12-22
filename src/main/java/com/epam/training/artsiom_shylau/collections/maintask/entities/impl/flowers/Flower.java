@@ -3,7 +3,6 @@ package com.epam.training.artsiom_shylau.collections.maintask.entities.impl.flow
 import com.epam.training.artsiom_shylau.collections.maintask.entities.BouquetComponent;
 import com.epam.training.artsiom_shylau.collections.maintask.enums.Color;
 import com.epam.training.artsiom_shylau.collections.maintask.exceptions.FlowerException;
-
 import java.util.Objects;
 
 public abstract class Flower implements BouquetComponent {
@@ -14,8 +13,7 @@ public abstract class Flower implements BouquetComponent {
     int daysAfterSlice;
     Color color;
 
-
-    public Flower(Builder<?> builder) throws FlowerException {
+    public Flower(Builder<?> builder) {
         this.kind = builder.kind;
         this.color = builder.color;
         this.price = builder.price;
@@ -44,6 +42,7 @@ public abstract class Flower implements BouquetComponent {
     }
 
     public static abstract class Builder<T extends Builder> {
+
         private String kind = "default kind";
         private double price = 3;
         private double stemLength = 35.0;

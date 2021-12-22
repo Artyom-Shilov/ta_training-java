@@ -86,8 +86,8 @@ public class FloristTest {
 
     @Test
     public void testFindFlowersByStemLengthFromMoreThanTo() throws FloristException {
-        Assert.assertEquals(0, florist.findFlowersByStemLength(florist.collectBouquet(rose), 100, 0)
-                                                                                .size());
+        Assert.assertEquals(0, florist.findFlowersByStemLength(
+                florist.collectBouquet(rose), 100, 0).size());
     }
 
     @Test

@@ -15,7 +15,7 @@ public class Wrapper implements BouquetComponent {
     private double height;
     private double price;
 
-    public Wrapper(Builder builder) throws WrapperException {
+    public Wrapper(Builder builder) {
         this.material = builder.material;
         this.color = builder.color;
         this.height = builder.height;

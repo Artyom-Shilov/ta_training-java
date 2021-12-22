@@ -54,7 +54,7 @@ public class Florist {
             return bouquet.components.stream().mapToDouble(BouquetComponent::getPrice).sum();
     }
 
-    Comparator<BouquetComponent> comparatorForSortingBouquetDaysAfterSlice = (o1, o2) -> {
+    Comparator<BouquetComponent> comparatorForSortingBouquetByDaysAfterSlice = (o1, o2) -> {
         if (!(o1 instanceof Flower) && !(o2 instanceof Flower)) {
             return o1.getClass().getName().charAt(0) - o2.getClass().getName().charAt(0);
         }
@@ -69,7 +69,7 @@ public class Florist {
 
     public void sortFlowersByDaysAfterSlice(Bouquet bouquet) throws FloristException {
             FloristValidator.validateObjectNull(bouquet);
-            bouquet.components.sort(comparatorForSortingBouquetDaysAfterSlice);
+            bouquet.components.sort(comparatorForSortingBouquetByDaysAfterSlice);
     }
 
     public List<Flower> findFlowersByStemLength(Bouquet bouquet, double from, double to) throws FloristException {

@@ -10,10 +10,10 @@ import java.util.Arrays;
 public class Runner {
 
     private static Logger logger = Logger.getLogger(Runner.class);
+    private static int[] array  = {555, 355636, -2343242, 222, -45, 989, 0, -2344, 675, 66};
 
     public static void main(String[] args) {
         try {
-            int[] array = {555, 355636, -2343242, 222, -45, 989, 0, -2344, 675, 66};
             logger.log(Level.INFO, "Initial array: " + Arrays.toString(array));
             OperationsWithNumbers numbersOperator = new OperationsWithNumbers();
             logger.log(Level.INFO, "The longest number and its length: "

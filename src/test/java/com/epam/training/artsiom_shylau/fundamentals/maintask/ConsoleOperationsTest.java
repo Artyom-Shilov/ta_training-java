@@ -6,7 +6,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -134,7 +133,6 @@ public class ConsoleOperationsTest {
     @Test
     public void testCalculateMultiplicationOfArguments() throws ConsoleOperationsException {
         consoleOperations.printMultiplicationOfCommandLineArgumentsInConsole(new String[]{"0.3", "4", "1.45", "-3"});
-        int expected = -96480;
         Assert.assertEquals(-5.22,  Double.parseDouble(outputStreamCaptor.toString().trim()), 0.001);
     }
 
@@ -157,9 +155,8 @@ public class ConsoleOperationsTest {
     @Test(expected = ConsoleOperationsException.class)
     public void testCalculateMultiplicationOfArgumentsLetters() throws ConsoleOperationsException {
         consoleOperations.printMultiplicationOfCommandLineArgumentsInConsole(
-                                                                        new String[]{"string", "40", "0", "67", "-3"});
+                new String[]{"string", "40", "0", "67", "-3"});
     }
-
 
     @After
     public void tearDown() {

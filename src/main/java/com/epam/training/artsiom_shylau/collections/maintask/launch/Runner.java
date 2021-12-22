@@ -8,7 +8,6 @@ import com.epam.training.artsiom_shylau.collections.maintask.entities.impl.flowe
 import com.epam.training.artsiom_shylau.collections.maintask.util.Florist;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -32,10 +31,10 @@ public class Runner {
             florist.sortFlowersByDaysAfterSlice(bouquet);
             logger.log(Level.INFO, "Bouquet sorted by number of days after slice: " + bouquet);
             logger.log(Level.INFO, "Price of bouquet: " + florist.countBouquetPrice(bouquet));
-            logger.log(Level.INFO, "flowers in bouquet with stem length between "
-                    + START_VALUE_FOR_SEARCHING_BY_STEM_LENGTH +  " and " + END_VALUE_FOR_SEARCHING_BY_STEM_LENGTH
-                    + ": " +  florist.findFlowersByStemLength(bouquet, START_VALUE_FOR_SEARCHING_BY_STEM_LENGTH
-                                , END_VALUE_FOR_SEARCHING_BY_STEM_LENGTH));
+            logger.log(Level.INFO, "Flowers in bouquet with stem length between "
+                    + START_VALUE_FOR_SEARCHING_BY_STEM_LENGTH + " and " + END_VALUE_FOR_SEARCHING_BY_STEM_LENGTH
+                    + ": " + florist.findFlowersByStemLength(bouquet, START_VALUE_FOR_SEARCHING_BY_STEM_LENGTH
+                    , END_VALUE_FOR_SEARCHING_BY_STEM_LENGTH));
         } catch (Exception e) {
             StringWriter stringWriter = new StringWriter();
             PrintWriter printWriter = new PrintWriter(stringWriter);

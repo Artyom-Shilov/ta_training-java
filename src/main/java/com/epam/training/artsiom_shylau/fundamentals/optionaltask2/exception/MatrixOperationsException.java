@@ -2,8 +2,7 @@ package com.epam.training.artsiom_shylau.fundamentals.optionaltask2.exception;
 
 public class MatrixOperationsException extends Exception {
 
-    public MatrixOperationsException() {
-    }
+    public MatrixOperationsException() {}
 
     public MatrixOperationsException(String message) {
         super(message);

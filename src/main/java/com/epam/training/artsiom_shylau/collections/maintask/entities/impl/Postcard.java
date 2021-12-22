@@ -2,7 +2,6 @@ package com.epam.training.artsiom_shylau.collections.maintask.entities.impl;
 
 import com.epam.training.artsiom_shylau.collections.maintask.entities.BouquetComponent;
 import com.epam.training.artsiom_shylau.collections.maintask.exceptions.PostcardException;
-
 import java.util.Objects;
 
 public class Postcard implements BouquetComponent {
@@ -12,7 +11,7 @@ public class Postcard implements BouquetComponent {
     private double price;
     private String text;
 
-    public Postcard(Builder builder) throws PostcardException {
+    public Postcard(Builder builder) {
         this.height = builder.height;
         this.length = builder.length;
         this.price = builder.price;

@@ -30,85 +30,85 @@ public class ArrayBookStorageTest {
     }
 
     @Before
-    public void setUp() throws BookStorageException, BookException {
+    public void setUp() throws BookStorageException {
         bookStorage = new ArrayBookStorage(firstTestBook, secondTestBook, thirdTestBook, fourthTestBook);
     }
 
     @Test
-    public void testGetAllBooksNotEmptyStorage() throws BookStorageException {
+    public void testGetAllBooksNotEmptyStorage() {
         Assert.assertEquals(4, bookStorage.getAllBooks().length);
     }
 
     @Test
-    public void testGetAllBooksEmptyStorage() throws BookStorageException {
+    public void testGetAllBooksEmptyStorage() {
         bookStorage = new ArrayBookStorage();
         Assert.assertEquals(0, bookStorage.getAllBooks().length);
     }
 
     @Test
-    public void testFindBookByIdValidIdBookIsPresent() throws BookStorageException, BookException {
+    public void testFindBookByIdValidIdBookIsPresent() throws BookException {
         Assert.assertEquals(bookStorage.getAllBooks()[0],
                 bookStorage.findBookById(1).orElse(new Book.Builder().build()));
     }
 
     @Test
-    public void testFindBookByIdValidIdBookIsNotPresent() throws BookStorageException {
+    public void testFindBookByIdValidIdBookIsNotPresent() {
         Assert.assertFalse(bookStorage.findBookById(150).isPresent());
     }
 
     @Test
-    public void testFindBookByIdInvalidId() throws BookStorageException {
+    public void testFindBookByIdInvalidId() {
         Assert.assertFalse(bookStorage.findBookById(-10).isPresent());
     }
 
     @Test
-    public void testRemoveBookByIdValidIdBookIsPresent() throws BookStorageException {
+    public void testRemoveBookByIdValidIdBookIsPresent() {
         bookStorage.removeBookById(2);
         Assert.assertEquals(3, bookStorage.getAmount());
     }
 
     @Test
-    public void testRemoveBookByIdValidIdElementIsNotPresent() throws BookStorageException {
+    public void testRemoveBookByIdValidIdElementIsNotPresent() {
         Assert.assertFalse(bookStorage.removeBookById(50));
     }
 
     @Test
-    public void testRemoveBookByIdInvalidId() throws BookStorageException {
+    public void testRemoveBookByIdInvalidId() {
         Assert.assertFalse(bookStorage.removeBookById(-3));
     }
 
     @Test
-    public void testFindBooksByPublishingOfficeBooksArePresent() throws BookStorageException {
+    public void testFindBooksByPublishingOfficeBooksArePresent() {
         Assert.assertEquals(2, bookStorage.findBooksByPublishingOffice("Simon & Schuster").length);
     }
 
     @Test
-    public void testFindBooksByPublishingOfficeBooksAreNotPresent() throws BookStorageException {
+    public void testFindBooksByPublishingOfficeBooksAreNotPresent() {
         Assert.assertEquals(0, bookStorage.findBooksByPublishingOffice("Farrar, Straus & Giroux").length);
     }
 
     @Test
-    public void testFindBooksByPublishingOfficeBooksEmptyStorage() throws BookStorageException {
+    public void testFindBooksByPublishingOfficeBooksEmptyStorage() {
         Assert.assertEquals(0, bookStorage.findBooksByPublishingOffice("Farrar, Straus & Giroux").length);
     }
 
     @Test
-    public void testFindBooksByPublishingOfficeBooksNullAsArgument() throws BookStorageException {
+    public void testFindBooksByPublishingOfficeBooksNullAsArgument() {
         Assert.assertEquals(0, bookStorage.findBooksByPublishingOffice(null).length);
     }
 
     @Test
-    public void testFindBooksPublishedAfterCertainYearPositiveYearBookIsPresent() throws BookStorageException {
+    public void testFindBooksPublishedAfterCertainYearPositiveYearBookIsPresent() {
         Assert.assertEquals(1, bookStorage.findBooksPublishedAfterCertainYear(2000).length);
     }
 
     @Test
-    public void testFindBooksPublishedAfterCertainYearPositiveYearBookIsNotPresent() throws BookStorageException {
+    public void testFindBooksPublishedAfterCertainYearPositiveYearBookIsNotPresent() {
         Assert.assertEquals(0, bookStorage.findBooksPublishedAfterCertainYear(2034).length);
     }
 
     @Test
-    public void testFindBooksPublishedAfterCertainYearNegativeYear() throws BookStorageException {
+    public void testFindBooksPublishedAfterCertainYearNegativeYear() {
         Assert.assertEquals(0, bookStorage.findBooksPublishedAfterCertainYear(-34).length);
     }
 

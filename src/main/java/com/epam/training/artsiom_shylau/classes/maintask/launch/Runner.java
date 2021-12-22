@@ -16,8 +16,8 @@ public class Runner {
     private static final int YEAR_FOR_SEARCHING = 2005;
 
     public static void main(String[] args) {
-        logger.log(Level.INFO, "Start of program");
         try {
+            logger.log(Level.INFO, "Start of program");
             ArrayBookStorage bookStorage = new ArrayBookStorage(
                     new Book.Builder().setTitle("Broken Glass").setAuthor("Alain Mabanckou")
                             .setPublishingOffice("Simon & Schuster").setPublicationYear(2005).build(),

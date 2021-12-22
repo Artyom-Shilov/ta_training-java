@@ -4,7 +4,7 @@ import com.epam.training.artsiom_shylau.collections.maintask.exceptions.FlowerEx
 
 public class LilyFlower extends Flower {
 
-    public LilyFlower(Builder builder) throws FlowerException {
+    public LilyFlower(Builder builder) {
        super(builder);
     }
 

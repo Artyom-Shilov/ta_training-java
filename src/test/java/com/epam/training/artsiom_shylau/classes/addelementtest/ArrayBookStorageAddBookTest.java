@@ -1,4 +1,4 @@
-package com.epam.training.artsiom_shylau.classes.elementaddingtest;
+package com.epam.training.artsiom_shylau.classes.addelementtest;
 
 import com.epam.training.artsiom_shylau.classes.maintask.entity.Book;
 import com.epam.training.artsiom_shylau.classes.maintask.exceptions.BookException;

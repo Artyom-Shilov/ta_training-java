@@ -2,8 +2,6 @@ package com.epam.training.artsiom_shylau.fundamentals.maintask.util;
 
 import com.epam.training.artsiom_shylau.fundamentals.maintask.exception.ConsoleOperationsException;
 import com.epam.training.artsiom_shylau.fundamentals.maintask.validation.ConsoleOperationsValidator;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConsoleOperations {
@@ -130,6 +128,7 @@ public class ConsoleOperations {
         if (scanner.hasNextInt()) {
             return scanner.nextInt();
         } else {
+            scanner.close();
             throw new ConsoleOperationsException("Integer number input: wrong number format");
         }
     }
